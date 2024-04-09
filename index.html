@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="https://cdn-icons-png.flaticon.com/256/4315/4315445.png"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>survey form</title>
+</head>
+<body>
+    <main class="main-content">
+        <section class="section-title">
+          <h1 id="title">A Suvey Form template</h1>
+          <p id="description">Feel free to modify this form and make it attractive</p>
+        </section>
+        <section class="section-input">
+         <form action="info.php" id="survey-form" method="post">
+            <fieldset>
+               <label for="name" id="name-label">
+                    Name
+                    <input  
+                    id="name" 
+                    type="text"
+                    autocomplete="name" 
+                    placeholder="Enter your name"
+                    required />
+                </label><br />
+                <label for="email" id="email-label">
+                    Email
+                    <input  
+                    id="email" 
+                    type="email" 
+                    autocomplete="name" 
+                    pattern=".+@gmail\.com"
+                    placeholder="Enter your Email"
+                    required />
+                </label><br />
+                <label for="number" id="number-label">
+                    Age (optional)
+                    <input
+                     id="number"
+                     type="number"
+                     min="0" 
+                     max="100"
+                     value="10"
+                     inputmode="numeric"
+                     pattern="\d*"
+                      />
+                </label><br />
+              </fieldset>
+              <fieldset>
+                <label for="dropdown">
+                    Which option best describes your current role?
+                    <select name="profession" id="dropdown" required>
+                    <option value="">--Select current role--</option>
+                    <option value="student">Student</option>
+                    <option value="fulltime">Full Time Job</option>
+                    <option value="learner">Full Time Learner</option>
+                    <option value="notsay">Prefer not to say</option>
+                    <option value="others">others</option>
+                    </select>
+                 </label><br />
+               </fieldset>
+               <fieldset>
+                <label id="radiotitle">Would you recommend freeCodeCamp to a friend? <br />
+                    <input 
+                    type="radio"
+                    id="definitely" 
+                    name="radiob"
+                    value="definitely"
+                    checked />
+                <label for="definitely" class="recommendation">Definitely</label><br />
+                <input 
+                    type="radio"
+                    id="maybe" 
+                    name="radiob"
+                    value="maybe" />
+                <label for="maybe" class="recommendation">Maybe</label><br />
+                <input 
+                    type="radio"
+                    id="notsure" 
+                    name="radiob"
+                    value="notsure" />
+                <label for="notsure" class="recommendation">Not sure</label>
+              </label><br />
+               </fieldset>
+               <fieldset>
+                <label for="feature">
+                    What is your favorite feature of freeCodeCamp?
+                    <select name="profession" id="feature" required>
+                    <option value="">--Select a feature--</option>
+                    <option value="challenges">Challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="community">Community</option>
+                    <option value="opensource">Open Source</option>
+                    </select>
+                 </label><br />
+               </fieldset>
+               <fieldset class='checkboxpart' >
+                <legend>What would you like to see improved? (Check all that apply):</legend>                  
+                <input 
+                type="checkbox" 
+                id="frontend" 
+                name="frontend" 
+                value="frontendprojects" />
+                  <label for="frontend" class="recommendation">Front-end Projects</label><br />
+                  <input 
+                type="checkbox" 
+                id="backend" 
+                name="backend" 
+                value="backendprojects" />
+                  <label for="backend" class="recommendation">Back-end Projects</label><br />
+                  <input 
+                type="checkbox" 
+                id="datavisualization" 
+                name="datavisualization" 
+                value="backendprojects" />
+                  <label for="datavisualization" class="recommendation" >Data Visualization</label><br />
+                  <input 
+                type="checkbox" 
+                id="challenges" 
+                name="challenges" 
+                value="challenges" />
+                  <label for="challenges" class="recommendation">Challenges</label><br />
+                  <input 
+                type="checkbox" 
+                id="opensource" 
+                name="opensource" 
+                value="opensource" />
+                  <label for="opensource" class="recommendation">Open Source Community</label><br />
+                  <input 
+                type="checkbox" 
+                id="gitter" 
+                name="gitter" 
+                value="gitter" />
+                  <label for="gitter" class="recommendation">Gitter help rooms</label><br />
+                  <input 
+                type="checkbox" 
+                id="video" 
+                name="video" 
+                value="video" />
+                  <label for="video" class="recommendation">Videos</label><br />
+                  <input 
+                type="checkbox" 
+                id="meetup" 
+                name="meetup" 
+                value="meetup" />
+                  <label for="meetup" class="recommendation">City Meetups</label><br />
+                  <input 
+                type="checkbox" 
+                id="Wiki" 
+                name="Wiki" 
+                value="Wiki" />
+                  <label for="Wiki" class="recommendation">Wiki</label><br />
+                  <input 
+                type="checkbox" 
+                id="forum" 
+                name="forum" 
+                value="forum" />
+                  <label for="forum" class="recommendation">Forum</label><br />
+                  <input 
+                type="checkbox" 
+                id="courses" 
+                name="courses" 
+                value="courses" />
+                  <label for="courses" class="recommendation">Additional Courses</label><br />
+               </fieldset>
+               <fieldset>
+                <label for="comment">Any comments or suggestions?</label><br />
+                <textarea id="comment" name="comment" rows="5" cols="33" placeholder="Enter your comment here..."></textarea><br />
+               </fieldset>
+               <fieldset>
+               <button id="submit" type="submit" value="Send Request">submit</button>
+              </fieldset>
+         </form>
+        </section>
+    </main>
+</body>
+</html>
